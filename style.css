@@ -210,7 +210,7 @@ body{
 /**footer**/
 footer{
   background-color: white;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 footer .flex{
   display: flex;
@@ -280,6 +280,7 @@ footer input{
     border-right: none;
     padding: 10px;
     margin-left: 70px;
+    color: gray;
 }
 footer button{
     margin-left: -2.5em;
@@ -290,4 +291,11 @@ footer button{
     padding-left: 20px;
     padding-right: 20px;
     color: grey;
+}
+footer h6{
+  text-align: center;
+  color: gray;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8em;
+  margin-top: 3rem;
 }
