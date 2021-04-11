@@ -274,3 +274,20 @@ footer p{
   font-family: 'Roboto Mono', monospace;
   font-size: 0.8em;
 }
+footer input{
+    border: .0625rem solid gray;
+    border-radius: 3.75rem;
+    border-right: none;
+    padding: 10px;
+    margin-left: 70px;
+}
+footer button{
+    margin-left: -2.5em;
+    border: .0625rem solid grey;
+    border-radius: 3.75rem;
+    border-left: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: grey;
+}
