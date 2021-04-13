@@ -211,6 +211,13 @@ body{
 .cart img{
   height:25rem !important;
 }
+.text h5{
+  font-size: 1rem;
+  font-family:'Roboto Mono', monospace;
+}
+.clor{
+  color: #d29f26;
+}
 /**footer**/
 footer{
   background-color: white;
@@ -302,4 +309,11 @@ footer h6{
   font-family: 'Roboto Mono', monospace;
   font-size: 0.8em;
   margin-top: 3rem;
+}
+.card a{
+  text-decoration:none;
+  border :#d29f26 1px solid;
+  background-color: #d29f26;
+  color: white;
+  margin-left: 8rem;
 }
