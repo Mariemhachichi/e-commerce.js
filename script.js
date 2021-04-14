@@ -1,22 +1,22 @@
 let carts = document.querySelectorAll('.add-cart')
  
-let product = [
+let products = [
     {
-        name :'robe',
-        tag: 'grey',
-        price: 25,
+        name :'sweater',
+        tag: 'Pink',
+        price: 500.499,
         inCart: 0,
     },
     {
-        name :'pull',
-        tag: 'bleu',
-        price: 30,
+        name :'Dress',
+        tag: 'black',
+        price: 600.999,
         inCart: 0,
     },
     {
-        name :'chemise',
-        tag: 'rouge',
-        price: 50,
+        name :'Jacket',
+        tag: 'Red',
+        price: 499.999,
         inCart: 0,
     }
 ]
@@ -24,23 +24,11 @@ let product = [
 for (let i=0; i<carts.length; i++){
     carts[i].addEventListener('click', (event) => {
         event.preventDefault()
-        cartNumbers(product[i]);
+        cartNumbers(products[i]);
+        totalCost(products[i])
     })
 }
 
-function cartNumbers () {
-    let productNumbers = localStorage.getItem('cartNumbers');
-
-    productNumbers = parseInt(productNumbers);
-    
-    if(productNumbers){
-        localStorage.setItem('cartNumbers', productNumbers + 1);
-        document.querySelector ('.cart span').textContent = productNumbers + 1;
-    }else{
-        localStorage.setItem('cartNumbers', 1)
-        document.querySelector ('.cart span').textContent = 1 ;
-    }
-}
 // Sauvgarde le compteur panier
 function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers')
@@ -50,3 +38,58 @@ function onLoadCartNumbers() {
     }
 }
 onLoadCartNumbers()
+
+
+function cartNumbers (product) {
+    
+    let productNumbers = localStorage.getItem('cartNumbers');
+
+    productNumbers = parseInt(productNumbers);
+    
+    if(productNumbers){
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector ('.cart span').textContent = productNumbers + 1;
+    }else{
+        localStorage.setItem('cartNumbers', + 1)
+        document.querySelector ('.cart span').textContent = 1 ;
+    }
+    setItems(product);
+}
+
+//les Objet à l'intérieur de le produit
+function setItems(product){
+    let cartItems = localStorage.getItem('productsInCart')
+    cartItems = JSON.parse(cartItems)
+
+    if(cartItems != null){
+
+        if(cartItems[product.tag] == undefined){
+            cartItems = {
+                ...cartItems,
+                [product.tag] : product
+            }
+        }
+        cartItems[product.tag].inCart += 1
+    } else {
+        product.inCart = 1;
+        cartItems = {
+        [product.tag]: product
+    }
+}
+    
+    localStorage.setItem("productsInCart", JSON.stringify
+    (cartItems));
+}
+onLoadCartNumbers()
+
+// totals
+function totalCost(product){
+    let cartCost = localStorage.getItem('totalCost')
+   
+    if(cartCost != null) {
+        cartCost = parseInt(cartCost)
+        localStorage.setItem("totalCost", cartCost + product.price)
+    } else {
+        localStorage.setItem("totalCost", product.price)
+    }
+}

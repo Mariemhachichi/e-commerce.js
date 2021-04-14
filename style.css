@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&family=Zilla+Slab+Highlight&display=swap');
 body{
-  background-color: #F0F0F0;
+ background-color: #F0F0F0;
  overflow-x: hidden;
 }
 /**nav bar**/
@@ -317,5 +317,11 @@ footer h6{
   color: white;
   margin-left: 8rem;
 }
-
+/***********page2*****/
+.products-container{
+  max-width: 650px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+}
 
