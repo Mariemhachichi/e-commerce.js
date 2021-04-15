@@ -93,3 +93,21 @@ function totalCost(product){
         localStorage.setItem("totalCost", product.price)
     }
 }
+// page carte
+function dispayCart() {
+    let cartItems = localStorage.getItem("productsInCart")
+    cartItem = JSON.parse(cartItems)
+    let productContainer = document.querySelector
+    (".products-container")
+    if ( cartItems  && productContainer){
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML +=  `
+            <div class="product" >
+            <img src="./img/${item.tag}.jpg">
+            <span>${item.name}</span>
+            </div>`
+        })
+    }
+}
+dispayCart()
