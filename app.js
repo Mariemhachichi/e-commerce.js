@@ -99,8 +99,8 @@ const div = document.createElement('div')
 div.classList.add('cart-item');
 div.innerHTML = `<img src=${item.image} alt="">
 <div>
-  <h4>${item.title}</h4>
-  <h5>${item.price}</h5>
+    <h4>${item.title}</h4>
+    <h5>${item.price}</h5>
   <span class="remove-item" data-id=${item.id}>remove</span>
 </div>
 <div>

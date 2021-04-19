@@ -477,7 +477,7 @@ footer h6{
 }
 .fa-chevron-up,
 .fa-chevron-down {
-  color: var(--primaryColor);
+  color: #d29f26;
   cursor: pointer;
 }
 /*---------- End of Cart Item -------------------- */
