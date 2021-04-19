@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "shirt",
+        "price": 10.99,
+        "image": { "fields": { "file": { "url": "./images/carte1.webp" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "sweater",
+        "price": 12.99,
+        "image": { "fields": { "file": { "url": "./images/look.webp" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "jacket",
+        "price": 12.99,
+        "image": { "fields": { "file": { "url": "./images/look2.webp" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "dress",
+        "price": 22.99,
+        "image": { "fields": { "file": { "url": "./images/look2.webp.webp" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "shirt",
+        "price": 88.99,
+        "image": { "fields": { "file": { "url": "./images/i1.webp" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "jacket",
+        "price": 32.99,
+        "image": { "fields": { "file": { "url": "./images/i2.webp" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "sweater",
+        "price": 45.99,
+        "image": { "fields": { "file": { "url": "./images/i3.webp" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "dress",
+        "price": 33.99,
+        "image": { "fields": { "file": { "url": "./images/i4.webp" } } }
+      }
+    }
+  ]
+}
